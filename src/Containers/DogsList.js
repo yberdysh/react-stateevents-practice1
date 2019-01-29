@@ -9,9 +9,18 @@ class DogList extends Component {
   render() {
     console.log(this.state);
     let dogs = this.state.dogsList.map(dog => (
-      <DogCard key={dog.id} dog={dog} />
+      <DogCard
+        key={dog.id}
+        dog={dog}
+        favoriteClickHandler={this.props.clickHandler}
+      />
     ));
-    return <div className="dogContainer">{dogs}</div>;
+    return (
+      <div className="dogContainer">
+        <h1>Dogs Index</h1>
+        {dogs}
+      </div>
+    );
   }
 }
 

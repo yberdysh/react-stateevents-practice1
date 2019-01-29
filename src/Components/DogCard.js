@@ -15,8 +15,11 @@ class DogCard extends React.Component {
       <div>
         <h2>{this.props.dog.name}</h2>
         <img alt="" src={this.props.dog.img} />
-        {this.state.bark ? <h1 className="bark">RUFF</h1> : null}
         <button onClick={this.clickHandler}>Bark</button>
+        <button onClick={() => this.props.favoriteClickHandler(this.props.dog)}>
+          Favorite/Unfavorite
+        </button>
+        {this.state.bark ? <h1>"RUFF"</h1> : null}
       </div>
     );
   }

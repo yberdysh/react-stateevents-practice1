@@ -42,3 +42,9 @@ img {
 .dogContainer {
   width: 50%;
 }
+.favorites {
+  width: 50%;
+}
+.list-container {
+  display: flex;
+}
