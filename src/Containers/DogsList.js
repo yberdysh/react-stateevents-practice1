@@ -2,18 +2,13 @@ import React, { Component } from "react";
 import Dogs from "../dogs";
 import DogCard from "../Components/DogCard";
 
-class DogList extends Component {
+class DogsList extends Component {
   state = {
     dogsList: Dogs
   };
   render() {
-    console.log(this.state);
     let dogs = this.state.dogsList.map(dog => (
-      <DogCard
-        key={dog.id}
-        dog={dog}
-        favoriteClickHandler={this.props.clickHandler}
-      />
+      <DogCard key={dog.id} dog={dog} />
     ));
     return (
       <div className="dogContainer">
@@ -24,4 +19,4 @@ class DogList extends Component {
   }
 }
 
-export default DogList;
+export default DogsList;

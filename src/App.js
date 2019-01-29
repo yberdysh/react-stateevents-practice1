@@ -6,32 +6,19 @@ import Favorites from "./Containers/Favorites";
 
 class App extends Component {
   state = {
-    favoriteDogs: []
+    favorites: []
   };
 
   addToFavorites = dogObj => {
     this.setState({
-      favoriteDogs: [...this.state.favoriteDogs, dogObj]
+      favorites: [...this.state.favorites, dogObj]
     });
   };
-
-  removeFromFavorites = dogObj => {
-    let newFavorites = this.state.favoriteDogs.filter(
-      dog => dog.id !== dogObj.id
-    );
-    this.setState({
-      favoriteDogs: newFavorites
-    });
-  };
-
   render() {
     return (
       <div className="list-container">
         <DogsList clickHandler={this.addToFavorites} />
-        <Favorites
-          clickHandler={this.removeFromFavorites}
-          dogs={this.state.favoriteDogs}
-        />
+        <Favorites dogs={this.state.favorites} />
       </div>
     );
   }
