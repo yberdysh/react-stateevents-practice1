@@ -11,3 +11,5 @@
 - manipulating arrays in state
 - rendering a component from multiple parents
 - changing component behavior based on its parent
+
+![dog gif](react-stateevents-hw.gif)
