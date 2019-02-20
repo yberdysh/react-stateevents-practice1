@@ -42,3 +42,7 @@ img {
 .dogContainer {
   width: 50%;
 }
+
+.dogRuff {
+  display: flex;
+}
